@@ -1,37 +1,30 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
 import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Root from "./routes/root.jsx";
+import {
+  BrowserRouter,
+  createBrowserRouter,
+  RouterProvider,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import Navbar from "./components/Navbar.jsx";
 import About from "./routes/About.jsx";
 import Projects from "./routes/Projects.jsx";
 import Contact from "./routes/Contact.jsx";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root />,
-
-    children: [
-      {
-        path: "/About",
-        element: <About />,
-      },
-      {
-        path: "/Projects",
-        element: <Projects />,
-      },
-      {
-        path: "/Contact",
-        element: <Contact />,
-      },
-    ],
-  },
-]);
+import Hero from "./components/Hero.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Projects" element={<Projects />} />
+        <Route path="/Contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );

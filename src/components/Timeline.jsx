@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Timeline = () => {
   return (
-    <div className="mx-20">
+    <div className="mx-20 mb-6">
       <h1 className="text-4xl font-bold text-center my-6">Journey So Far...</h1>
       <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
         <li>
