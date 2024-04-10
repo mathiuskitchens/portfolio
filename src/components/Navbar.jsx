@@ -98,7 +98,9 @@ export default function Navbar() {
             </div>
           </div>
           <div className="navbar flex justify-center md:justify-around w-full fixed top-0 z-40 bg-base-100 border-b-2 mt-0 pt-2">
-            <span className="text-xl">Matthew Kitchens</span>
+            <span className="text-xl btn btn-ghost rounded-lg">
+              <Link to="/">Matthew Kitchens</Link>
+            </span>
 
             <button className="btn btn-ghost text-xl hidden md:inline-flex rounded-lg">
               <Link to="/About">About</Link>

@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 const Timeline = () => {
   return (
     <div className="mx-20 mb-6">
-      <h1 className="text-4xl font-bold text-center my-6">Journey So Far...</h1>
-      <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+      <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical mt-6">
         <li>
           <div className="timeline-middle">
             <svg
@@ -120,7 +119,7 @@ const Timeline = () => {
             </svg>
           </div>
           <div className="timeline-start md:text-end mb-10">
-            <time className="font-mono italic">... My Future</time>
+            <time className="font-mono italic">My Future</time>
             <div className="text-lg font-black">Into the Great Unknown</div>I
             love what I do and I love learning how to do more and do it better.
             I'm excited to see where this journey takes me and what I can learn

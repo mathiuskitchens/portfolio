@@ -1,15 +1,10 @@
 import { Link } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 
-const Hero = () => {
-  const scrollOnePage = () => {
-    const pageHeight = window.innerHeight; // Get the viewport height
-    window.scrollBy({ top: pageHeight, behavior: "smooth" }); // Scroll down by one page height with smooth animation
-  };
-
+const HomePage = () => {
   return (
     <div
-      className="hero bg-base-200 relative"
+      className="hero bg-base-200 relative "
       style={{ height: "calc(100vh - 4rem)" }}
     >
       <div className="absolute top-14 md:top-0 md:left-0 md:relative min-h-96">
@@ -21,32 +16,27 @@ const Hero = () => {
 
         <div className="my-auto mx-auto text-center">
           <h1 className="text-5xl font-bold px-6">I'm Matt</h1>
-          <div className="divider px-6 w-3/4 md:w-1/2 mx-auto"></div>
-
-          <div className="text-xl mx-8 my-4">
+          <div className="text-3xl divider px-6 w-3/4 md:w-1/2 mx-auto"></div>
+          <div className="text-2xl">
             <Typewriter
               onInit={(typewriter) => {
                 typewriter
-
-                  .pauseFor(500)
-                  .typeString("I'm passionate about web development")
-                  .pauseFor(500)
-                  .changeDeleteSpeed(5)
-                  .deleteChars(15)
-                  .typeString("technology")
+                  .typeString("Developer")
                   .pauseFor(500)
                   .deleteChars(10)
-                  .typeString("helping others")
-                  .pauseFor(1000)
-                  .deleteChars(15)
-                  .pasteString(
-                    " web development, technology and helping others"
-                  )
+                  .typeString("Father")
+                  .pauseFor(500)
+                  .deleteChars(6)
+                  .typeString("Husband")
+                  .pauseFor(500)
+                  .deleteChars(7)
+                  .pasteString("Developer, Father, Husband")
                   .start();
               }}
             />
           </div>
         </div>
+
         <div className="flex justify-center">
           <Link to="/Contact" className="btn btn-primary text-2xl mt-12">
             Hire Me
@@ -57,4 +47,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HomePage;

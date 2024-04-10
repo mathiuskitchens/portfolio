@@ -6,10 +6,11 @@ const Contact = () => {
     src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
     type="module"
   ></script>;
+
   return (
     <>
       <h1 className="text-3xl text-center my-4">Contact Me</h1>
-      <div className="center w-2/3 mx-auto border rounded-xl m-4 border-none">
+      <div className="center w-1/2 mx-auto border rounded-xl m-4 border-none">
         <Lottie animationData={animationData} />
       </div>
       <div className="flex gap-2 justify-center">
