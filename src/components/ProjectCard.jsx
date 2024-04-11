@@ -2,6 +2,11 @@ const ProjectCard = ({ project }) => {
   return (
     <div className="card w-11/12 bg-base-100 shadow-xl pb-6 border mx-auto my-4">
       <figure>
+        {project.status === "In Progress" && (
+          <div className="absolute z-40 bg-base-100 top-0 text-lg p-2 rounded-lg border-b-2">
+            In Progress
+          </div>
+        )}
         <img
           className="grayscale transition duration-500 ease-in-out hover:grayscale-0"
           src={project.image}
@@ -24,7 +29,7 @@ const ProjectCard = ({ project }) => {
             href={project.github}
             target="_blank"
           >
-            Github
+            Source Code
           </a>
 
           <a

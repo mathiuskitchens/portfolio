@@ -29,19 +29,17 @@ const Hero = () => {
                 typewriter
 
                   .pauseFor(500)
-                  .typeString("I'm passionate about web development")
+                  .typeString("I'm passionate about donuts")
                   .pauseFor(500)
                   .changeDeleteSpeed(5)
-                  .deleteChars(15)
-                  .typeString("technology")
+                  .deleteChars(6)
+                  .typeString("building cool things")
                   .pauseFor(500)
-                  .deleteChars(10)
+                  .deleteChars(20)
                   .typeString("helping others")
                   .pauseFor(1000)
                   .deleteChars(15)
-                  .pasteString(
-                    " web development, technology and helping others"
-                  )
+                  .pasteString(" donuts, bulding and helping others")
                   .start();
               }}
             />

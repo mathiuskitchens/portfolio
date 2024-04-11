@@ -28,7 +28,7 @@ const Projects = () => {
       id: 3,
       title: "JavaScripture",
       description:
-        "A fun Bible webapp that translates verses into funny character translations",
+        "A fun Bible web app that translates verses into funny character translations",
       image: JavaScripture,
       link: "https://javascripture.netlify.app/",
       github: "https://github.com/mathiuskitchens/javascripture",
@@ -50,6 +50,7 @@ const Projects = () => {
         "Express",
         "MongoDB",
       ],
+      status: "In Progress",
     },
   ];
 

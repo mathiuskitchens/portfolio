@@ -97,7 +97,7 @@ export default function Navbar() {
               </ul>
             </div>
           </div>
-          <div className="navbar flex justify-center md:justify-around w-full fixed top-0 z-40 bg-base-100 border-b-2 mt-0 pt-2">
+          <div className="navbar flex justify-center md:justify-around w-screen fixed top-0 z-40 bg-base-100 border-b-2 mt-0 pt-2">
             <span className="text-xl btn btn-ghost rounded-lg">
               <Link to="/">Matthew Kitchens</Link>
             </span>

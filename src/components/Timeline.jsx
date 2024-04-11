@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { LeftTimeline } from "./LeftTimeline";
+import { RightTimeline } from "./RightTimeline";
 
 const Timeline = () => {
   return (
@@ -19,11 +22,16 @@ const Timeline = () => {
               />
             </svg>
           </div>
-          <div className="timeline-start md:text-end mb-10">
-            <time className="font-mono italic">2021</time>
-            <div className="text-lg font-black">The First Dive</div>
-            Started learning HTML and CSS through freeCodeCamp and Udemy Course
+
+          <div className="timeline-start md:text-end mb-10 max-w-full">
+            <LeftTimeline>
+              <time className="font-mono italic">2021</time>
+              <div className="text-lg font-black">The First Dive</div>
+              Started learning HTML and CSS through freeCodeCamp and Udemy
+              Course
+            </LeftTimeline>
           </div>
+
           <hr />
         </li>
         <li>
@@ -43,10 +51,12 @@ const Timeline = () => {
             </svg>
           </div>
           <div className="timeline-end mb-10">
-            <time className="font-mono italic">October 2022</time>
-            <div className="text-lg font-black">Moving into JS-Land</div>
-            Found a mentor, started learning Javascript, which led to building a
-            Pokedex app with Vanilla JS
+            <RightTimeline>
+              <time className="font-mono italic">October 2022</time>
+              <div className="text-lg font-black">Moving into JS-Land</div>
+              Found a mentor, started learning Javascript, which led to building
+              a Pokedex app with Vanilla JS
+            </RightTimeline>
           </div>
           <hr />
         </li>
@@ -66,14 +76,18 @@ const Timeline = () => {
               />
             </svg>
           </div>
+
           <div className="timeline-start md:text-end mb-10">
-            <time className="font-mono italic">May 2023</time>
-            <div className="text-lg font-black">Full-Stack Party</div>
-            Started learning React, NodeJS, MongoDB and how they all fit
-            together. This was prompted by curiousity and need, as I got a
-            takehome test that required building a full-stack app to manage an
-            employee database
+            <LeftTimeline>
+              <time className="font-mono italic">May 2023</time>
+              <div className="text-lg font-black">Full-Stack Party</div>
+              Started learning React, NodeJS, MongoDB and how they all fit
+              together. This was prompted by curiousity and need, as I got a
+              takehome test that required building a full-stack app to manage an
+              employee database
+            </LeftTimeline>
           </div>
+
           <hr />
         </li>
         <li>
@@ -93,12 +107,14 @@ const Timeline = () => {
             </svg>
           </div>
           <div className="timeline-end mb-10">
-            <time className="font-mono italic">June 2023</time>
-            <div className="text-lg font-black">Mission Success</div>
-            Landed my first job as a full-stack developer with DevAO LLC in
-            Columbus, OH. To date, I've worked on a variety of projects using
-            React, Typescript, ChakraUI, Formik, NodeJS, and even some time with
-            Miva and Shopify for e-commerce.
+            <RightTimeline>
+              <time className="font-mono italic">June 2023</time>
+              <div className="text-lg font-black">Mission Success</div>
+              Landed my first job as a full-stack developer with DevAO LLC in
+              Columbus, OH. To date, I've worked on a variety of projects using
+              React, Typescript, ChakraUI, Formik, NodeJS, and even some time
+              with Miva and Shopify for e-commerce.
+            </RightTimeline>
           </div>
           <hr />
         </li>
@@ -119,14 +135,16 @@ const Timeline = () => {
             </svg>
           </div>
           <div className="timeline-start md:text-end mb-10">
-            <time className="font-mono italic">My Future</time>
-            <div className="text-lg font-black">Into the Great Unknown</div>I
-            love what I do and I love learning how to do more and do it better.
-            I'm excited to see where this journey takes me and what I can learn
-            along the way. If you want to be a part of the story,{" "}
-            <Link className="underline" to="/Contact">
-              contact me!
-            </Link>
+            <LeftTimeline>
+              <time className="font-mono italic">My Future</time>
+              <div className="text-lg font-black">Into the Great Unknown</div>I
+              love what I do and I love learning how to do more and do it
+              better. I'm excited to see where this journey takes me and what I
+              can learn along the way. If you want to be a part of the story,{" "}
+              <Link className="underline" to="/Contact">
+                contact me!
+              </Link>
+            </LeftTimeline>
           </div>
         </li>
       </ul>
