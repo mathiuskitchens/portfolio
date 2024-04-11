@@ -6,7 +6,7 @@ export function LeftTimeline({ children }) {
   const isInView = useInView(ref, { once: true });
 
   const variants = {
-    hidden: { y: "-100px", opacity: 0 },
+    hidden: { y: "200px", opacity: 0 },
     visible: { y: 0, opacity: 1 },
   };
 
