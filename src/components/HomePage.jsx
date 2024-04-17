@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Typewriter from "typewriter-effect";
+import Kitchens from "../assets/Kitchens.jpeg";
 
 const HomePage = () => {
   return (
@@ -9,7 +10,7 @@ const HomePage = () => {
     >
       <div className="absolute top-14 md:top-0 md:left-0 md:relative min-h-96">
         <img
-          src="https://media.licdn.com/dms/image/sync/C5627AQF0-Fyk63b25w/articleshare-shrink_480/0/1711606135529?e=1712973600&v=beta&t=k8eRO5JA-P6GoAymX9L1_8gr3Hdz50TB0VMazX2VZAQ"
+          src={Kitchens}
           className="mask mask-squircle max-w-sm rounded-lg shadow-2xl grayscale transition duration-500 ease-in-out hover:grayscale-0 w-40 md:w-96 my-8 center mx-auto -mt-6 "
           alt="Image of Matthew Kitchens"
         />
