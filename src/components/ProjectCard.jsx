@@ -1,14 +1,24 @@
+import { motion } from "framer-motion";
+
 const ProjectCard = ({ project }) => {
   return (
-    <div className="card w-11/12 bg-base-100 shadow-xl pb-6 border mx-auto my-4">
+    <motion.div
+      initial={{ scale: 0.5 }}
+      animate={{ scale: 1 }}
+      transition={{
+        duration: 0.3,
+        type: "spring",
+      }}
+      className="card w-11/12 bg-base-100 shadow-xl pb-6 border mx-auto my-24 opacity-80 hover:opacity-100 hover:shadow-2xl transition duration-500 ease-in-out"
+    >
       <figure>
         {project.status === "In Progress" && (
-          <div className="absolute z-40 bg-base-100 top-0 text-lg p-2 rounded-lg border-b-2">
+          <div className="absolute w-full text-center bg-base-300 z-40 text-lg p-2">
             In Progress
           </div>
         )}
         <img
-          className="grayscale transition duration-500 ease-in-out hover:grayscale-0"
+          className=" saturate-50 transition duration-500 ease-in-out hover:saturate-100"
           src={project.image}
           alt={project.description}
         />
@@ -29,7 +39,7 @@ const ProjectCard = ({ project }) => {
             href={project.github}
             target="_blank"
           >
-            Source Code
+            View Source Code
           </a>
 
           <a
@@ -37,11 +47,11 @@ const ProjectCard = ({ project }) => {
             href={project.link}
             target="_blank"
           >
-            Live
+            Open Live App
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

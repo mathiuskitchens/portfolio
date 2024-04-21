@@ -98,19 +98,28 @@ export default function Navbar() {
             </div>
           </div>
           <div className="navbar flex justify-center md:justify-around w-screen fixed top-0 z-40 bg-base-100 border-b-2 mt-0 pt-2">
-            <span className="text-xl btn btn-ghost rounded-lg">
-              <Link to="/">Matthew Kitchens</Link>
-            </span>
+            <Link to="/" className="text-xl btn btn-ghost rounded-lg">
+              Matthew Kitchens
+            </Link>
 
-            <button className="btn btn-ghost text-xl hidden md:inline-flex rounded-lg">
-              <Link to="/About">About</Link>
-            </button>
-            <button className="btn btn-ghost text-xl hidden md:inline-flex rounded-lg">
-              <Link to="/Projects">Projects</Link>
-            </button>
-            <button className="btn btn-ghost text-xl hidden md:inline-flex rounded-lg">
-              <Link to="/Contact">Contact</Link>
-            </button>
+            <Link
+              to="/About"
+              className="btn btn-ghost text-xl hidden md:inline-flex rounded-lg"
+            >
+              About
+            </Link>
+            <Link
+              to="/Projects"
+              className="btn btn-ghost text-xl hidden md:inline-flex rounded-lg"
+            >
+              Projects
+            </Link>
+            <Link
+              to="/Contact"
+              className="btn btn-ghost text-xl hidden md:inline-flex rounded-lg"
+            >
+              Contact
+            </Link>
             <div>
               <label className="cursor-pointer grid place-items-center fixed top-0 right-0 p-5">
                 <input

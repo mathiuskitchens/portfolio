@@ -3,6 +3,7 @@ import TasteAndSee from "../assets/TasteAndSee.png";
 import Pokedex from "../assets/Pokedex.png";
 import JavaScripture from "../assets/JavaScripture.png";
 import Hs1 from "../assets/Hs-1.png";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const myProjects = [
@@ -56,8 +57,20 @@ const Projects = () => {
 
   return (
     <>
-      <h1 className="text-4xl font-bold text-center my-8">Projects</h1>
-      <div className="md:w-1/2 mx-auto">
+      <motion.h1
+        initial={{ x: 100 }}
+        animate={{ x: 0 }}
+        transition={{
+          duration: 0.8,
+          type: "spring",
+          stiffness: 260,
+          damping: 20,
+        }}
+        className="text-4xl font-bold text-center mt-6 -mb-8 md:mt-16 underline"
+      >
+        Projects
+      </motion.h1>
+      <div className="md:w-1/2 mx-auto ">
         {myProjects.map((project) => (
           <ProjectCard project={project} key={project.id} />
         ))}
