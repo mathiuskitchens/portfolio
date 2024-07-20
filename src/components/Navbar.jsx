@@ -15,11 +15,11 @@ export default function Navbar() {
       console.log("User prefers dark mode");
       document
         .querySelector("[data-theme]")
-        .setAttribute("data-theme", "black");
+        .setAttribute("data-theme", "dracula");
     } else {
       // User prefers light mode
       console.log("User prefers light mode");
-      document.querySelector("[data-theme]").setAttribute("data-theme", "lofi");
+      document.querySelector("[data-theme]").setAttribute("data-theme", "autumn");
     }
   }, [isDarkMode]);
 
@@ -29,9 +29,9 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="h-full relative">
-        <div className="navbar border-b-2 flex justify-center md:justify-around sticky top-0 z-50 bg-base-100">
-          <div className="drawer w-16 fixed left-0 top-4 md:hidden z-50">
+      <div className="relative h-full">
+        <div className="sticky top-0 z-50 flex justify-center border-b-2 navbar md:justify-around bg-base-100">
+          <div className="fixed left-0 z-50 w-16 drawer top-4 md:hidden">
             <input
               id="my-drawer"
               type="checkbox"
@@ -43,14 +43,14 @@ export default function Navbar() {
               {/* Page content here */}
               <label
                 htmlFor="my-drawer"
-                className=" drawer-button w-16 swap swap-rotate"
+                className="w-16 drawer-button swap swap-rotate"
               >
                 {/* this hidden checkbox controls the state */}
                 <input type="checkbox" />
 
                 {/* hamburger icon */}
                 <svg
-                  className="swap-off fill-current"
+                  className="fill-current swap-off"
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
                   height="32"
@@ -61,7 +61,7 @@ export default function Navbar() {
 
                 {/* close icon */}
                 <svg
-                  className="swap-on fill-current"
+                  className="fill-current swap-on"
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
                   height="32"
@@ -77,7 +77,7 @@ export default function Navbar() {
                 aria-label="close sidebar"
                 className="drawer-overlay"
               ></label>
-              <ul className="menu p-4 w-60 min-h-full bg-base-200 text-base-content">
+              <ul className="min-h-full p-4 menu w-60 bg-base-200 text-base-content">
                 {/* Sidebar content here */}
                 <li className="text-xl">
                   <Link to="/About" onClick={handleDrawerClose}>
@@ -97,35 +97,35 @@ export default function Navbar() {
               </ul>
             </div>
           </div>
-          <div className="navbar flex justify-center md:justify-around w-screen fixed top-0 z-40 bg-base-100 border-b-2 mt-0 pt-2">
-            <Link to="/" className="text-xl btn btn-ghost rounded-lg">
+          <div className="fixed top-0 z-40 flex justify-center w-screen pt-2 mt-0 border-b-2 navbar md:justify-around bg-base-100">
+            <Link to="/" className="text-xl rounded-lg btn btn-ghost">
               Matthew Kitchens
             </Link>
 
             <Link
               to="/About"
-              className="btn btn-ghost text-xl hidden md:inline-flex rounded-lg"
+              className="hidden text-xl rounded-lg btn btn-ghost md:inline-flex"
             >
               About
             </Link>
             <Link
               to="/Projects"
-              className="btn btn-ghost text-xl hidden md:inline-flex rounded-lg"
+              className="hidden text-xl rounded-lg btn btn-ghost md:inline-flex"
             >
               Projects
             </Link>
             <Link
               to="/Contact"
-              className="btn btn-ghost text-xl hidden md:inline-flex rounded-lg"
+              className="hidden text-xl rounded-lg btn btn-ghost md:inline-flex"
             >
               Contact
             </Link>
             <div>
-              <label className="cursor-pointer grid place-items-center fixed top-0 right-0 p-5">
+              <label className="fixed top-0 right-0 grid p-5 cursor-pointer place-items-center">
                 <input
                   type="checkbox"
-                  value="black"
-                  className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2"
+                  value="night"
+                  className="col-span-2 col-start-1 row-start-1 toggle theme-controller bg-base-content"
                   checked={isDarkMode}
                   onChange={() => setIsDarkMode(!isDarkMode)}
                 />
