@@ -80,8 +80,8 @@ export default function Navbar() {
               <ul className="min-h-full p-4 menu w-60 bg-base-200 text-base-content">
                 {/* Sidebar content here */}
                 <li className="text-xl">
-                  <Link to="/About" onClick={handleDrawerClose}>
-                    About
+                  <Link to="/" onClick={handleDrawerClose}>
+                    Home
                   </Link>
                 </li>
                 <li className="text-xl">
@@ -102,12 +102,6 @@ export default function Navbar() {
               Matthew Kitchens
             </Link>
 
-            <Link
-              to="/About"
-              className="hidden text-xl rounded-lg btn btn-ghost md:inline-flex"
-            >
-              About
-            </Link>
             <Link
               to="/Projects"
               className="hidden text-xl rounded-lg btn btn-ghost md:inline-flex"

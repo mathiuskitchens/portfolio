@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 import Kitchens from "../assets/Kitchens.jpeg";
+import BouncingArrow from "../components/BouncingArrow";
 
 const Hero = () => {
   const scrollOnePage = () => {
@@ -13,7 +14,7 @@ const Hero = () => {
       className="hero bg-base-200 relative"
       style={{ height: "calc(100vh - 4rem)" }}
     >
-      <div className="absolute top-14 md:top-0 md:left-0 md:relative min-h-96">
+      <div className="absolute top-20 md:top-0 md:left-0 md:relative min-h-124">
         <img
           src={Kitchens}
           className="mask mask-squircle max-w-sm rounded-lg shadow-2xl grayscale transition duration-500 ease-in-out hover:grayscale-0 w-40 md:w-96 my-8 center mx-auto -mt-6 "
@@ -51,8 +52,10 @@ const Hero = () => {
             Hire Me
           </Link>
         </div>
+        <BouncingArrow />
       </div>
     </div>
+    
   );
 };
 
