@@ -3,11 +3,25 @@ import TasteAndSee from "../assets/TasteAndSee.png";
 import Pokedex from "../assets/Pokedex.png";
 import JavaScripture from "../assets/JavaScripture.png";
 import Hs1 from "../assets/Hs-1.png";
+import KK1 from "../assets/KK1.png";
 import { motion } from "framer-motion";
 
 const Projects = () => {
   const myProjects = [
-        {
+    {
+      id: 1,
+      title: "Professional Author & Speaker Page",
+      description: "A personalized website made for an author and speaker, built in JSON-LD schema for increased google search results.",
+      image: KK1,
+      link: "https://kourtneykitchens.com/",
+      github: "https://github.com/mathiuskitchens/kourtney_kitchens",
+      techStack: [
+        "AstroJS",
+        "TailwindCSS",
+      ],
+      status: "Complete"
+    },
+    {
       id: 1,
       title: "Hearthstone Deck Builder",
       description:
@@ -19,13 +33,13 @@ const Projects = () => {
         "React",
         "DaisyUI",
         "TailwindCSS",
-        "Supabase", 
+        "Supabase",
         "PostgreSQL"
       ],
       status: "In Progress",
     },
 
-        {
+    {
       id: 2,
       title: "JavaScripture",
       description:
